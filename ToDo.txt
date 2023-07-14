@@ -1,0 +1,31 @@
+Wall Kick
+Line Clear
+Score
+  - Pointes per Line
+  - Pointes per Locked?
+  - Level Increase
+    - Color Change
+  - Point Display
+Drop Speed
+  - Changer Per Level?
+Up Next
+
+
+Tutorial Layout
+---------------
+Part 1:
+  - Setup 'Game Scene'
+  - Wall Collision Layer
+  - Global Script
+  - Game Script
+  - Toggle Background (States)
+
+Part 2:
+  - Create Shapes
+    - Is there a way for me to provide shape scene?
+  - Basic Drop/Move/Lock
+
+Part 3:
+  - Shape Breakdown
+  - Line Clear
+  - Score Count

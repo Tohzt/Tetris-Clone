@@ -1,0 +1,152 @@
+[gd_scene load_steps=7 format=3 uid="uid://bg17k7sjfdxch"]
+
+[ext_resource type="Script" path="res://Scripts/Game.gd" id="1_pieud"]
+[ext_resource type="Texture2D" uid="uid://hr6lllr8qff6" path="res://Assets/Bgr_Game.png" id="2_4nukc"]
+[ext_resource type="Texture2D" uid="uid://bvkuwm3ilgese" path="res://Assets/Bgr_Intro.png" id="2_ytm3s"]
+[ext_resource type="Texture2D" uid="uid://dsv78smrsqu1h" path="res://Assets/Bgr_Menu.png" id="3_4i45m"]
+[ext_resource type="Texture2D" uid="uid://b8dkahbgqpbt7" path="res://Assets/Bgr_Pause.png" id="4_1fvcf"]
+[ext_resource type="PackedScene" uid="uid://3y2gye4j5r0v" path="res://Scenes/Inspector.tscn" id="6_7muky"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_pieud")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(88, 152)
+polygon = PackedVector2Array(0, -120, 0, 56, 96, 56, 96, -120, 88, -112, 88, 48, 8, 48, 8, -112)
+
+[node name="Backgrounds" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Game" type="TextureRect" parent="Backgrounds"]
+layout_mode = 2
+offset_right = 256.0
+offset_bottom = 224.0
+texture = ExtResource("2_4nukc")
+
+[node name="Menu" type="TextureRect" parent="Backgrounds"]
+visible = false
+layout_mode = 0
+offset_right = 252.0
+offset_bottom = 224.0
+texture = ExtResource("3_4i45m")
+
+[node name="Intro" type="TextureRect" parent="Backgrounds"]
+visible = false
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 224.0
+texture = ExtResource("2_ytm3s")
+
+[node name="Pause" type="TextureRect" parent="Backgrounds"]
+visible = false
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 224.0
+texture = ExtResource("4_1fvcf")
+
+[node name="Shape" type="Node2D" parent="."]
+
+[node name="Blocks" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Inspector" parent="." instance=ExtResource("6_7muky")]
+position = Vector2(88, 192)
+
+[node name="ScoreDisplay" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Statistics" type="VBoxContainer" parent="ScoreDisplay"]
+layout_mode = 2
+offset_left = 48.0
+offset_top = 87.0
+offset_right = 72.0
+offset_bottom = 194.0
+theme_override_constants/separation = 5
+
+[node name="T" type="Label" parent="ScoreDisplay/Statistics"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.870588, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+text = "000"
+
+[node name="J" type="Label" parent="ScoreDisplay/Statistics"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.870588, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+text = "000"
+
+[node name="Z" type="Label" parent="ScoreDisplay/Statistics"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.870588, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+text = "000"
+
+[node name="B" type="Label" parent="ScoreDisplay/Statistics"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.870588, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+text = "000"
+
+[node name="S" type="Label" parent="ScoreDisplay/Statistics"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.870588, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+text = "000"
+
+[node name="L" type="Label" parent="ScoreDisplay/Statistics"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.870588, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+text = "000"
+
+[node name="I" type="Label" parent="ScoreDisplay/Statistics"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.870588, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+text = "000"
+
+[node name="Scores" type="VBoxContainer" parent="ScoreDisplay"]
+layout_mode = 2
+offset_left = 192.0
+offset_top = 31.0
+offset_right = 240.0
+offset_bottom = 66.0
+theme_override_constants/separation = 13
+
+[node name="Top" type="Label" parent="ScoreDisplay/Scores"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "000000"
+
+[node name="Current" type="Label" parent="ScoreDisplay/Scores"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "000000"
+
+[node name="Lines" type="Label" parent="ScoreDisplay"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 8
+text = "000"
+
+[node name="Level" type="Label" parent="ScoreDisplay"]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 159.0
+offset_right = 224.0
+offset_bottom = 170.0
+theme_override_font_sizes/font_size = 8
+text = "99
+"

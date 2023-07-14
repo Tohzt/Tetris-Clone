@@ -1,0 +1,124 @@
+[gd_scene load_steps=3 format=3 uid="uid://tv6gitu4q25y"]
+
+[ext_resource type="Script" path="res://Scripts/Shapes.gd" id="1_yb0pe"]
+[ext_resource type="Texture2D" uid="uid://b5y5tv6mq5b04" path="res://Assets/Shapes.png" id="2_pg6mf"]
+
+[node name="Shapes" type="Node2D"]
+
+[node name="T" type="CharacterBody2D" parent="."]
+visible = false
+collision_layer = 3
+collision_mask = 3
+safe_margin = 0.001
+script = ExtResource("1_yb0pe")
+
+[node name="Sprite2D" type="Sprite2D" parent="T"]
+position = Vector2(-12, -12)
+texture = ExtResource("2_pg6mf")
+centered = false
+vframes = 7
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="T"]
+polygon = PackedVector2Array(-11, -3, 0, -3, 11, -3, 11, 3, 3, 3, 3, 11, -3, 11, -3, 3, -11, 3)
+
+[node name="J" type="CharacterBody2D" parent="."]
+visible = false
+collision_layer = 3
+collision_mask = 3
+safe_margin = 0.001
+script = ExtResource("1_yb0pe")
+
+[node name="Sprite2D" type="Sprite2D" parent="J"]
+position = Vector2(-12, -12)
+texture = ExtResource("2_pg6mf")
+centered = false
+vframes = 7
+frame = 1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="J"]
+polygon = PackedVector2Array(-11, -3, 11, -3, 11, 11, 5, 11, 5, 3, -11, 3)
+
+[node name="Z" type="CharacterBody2D" parent="."]
+visible = false
+collision_layer = 3
+collision_mask = 3
+safe_margin = 0.001
+script = ExtResource("1_yb0pe")
+
+[node name="Sprite2D" type="Sprite2D" parent="Z"]
+position = Vector2(-12, -12)
+texture = ExtResource("2_pg6mf")
+centered = false
+vframes = 7
+frame = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Z"]
+polygon = PackedVector2Array(-11, -3, 3, -3, 3, 5, 11, 5, 11, 11, -3, 11, -3, 3, -11, 3)
+
+[node name="B" type="CharacterBody2D" parent="."]
+visible = false
+collision_layer = 3
+collision_mask = 3
+safe_margin = 0.001
+script = ExtResource("1_yb0pe")
+
+[node name="Sprite2D" type="Sprite2D" parent="B"]
+position = Vector2(-16, -16)
+texture = ExtResource("2_pg6mf")
+centered = false
+vframes = 7
+frame = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="B"]
+polygon = PackedVector2Array(-7, -7, 7, -7, 7, 7, -7, 7)
+
+[node name="S" type="CharacterBody2D" parent="."]
+visible = false
+collision_layer = 3
+collision_mask = 3
+safe_margin = 0.001
+script = ExtResource("1_yb0pe")
+
+[node name="Sprite2D" type="Sprite2D" parent="S"]
+position = Vector2(-12, -12)
+texture = ExtResource("2_pg6mf")
+centered = false
+vframes = 7
+frame = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="S"]
+polygon = PackedVector2Array(-3, -3, 11, -3, 11, 3, 3, 3, 3, 11, -11, 11, -11, 5, -3, 5)
+
+[node name="L" type="CharacterBody2D" parent="."]
+visible = false
+collision_layer = 3
+collision_mask = 3
+safe_margin = 0.001
+script = ExtResource("1_yb0pe")
+
+[node name="Sprite2D" type="Sprite2D" parent="L"]
+position = Vector2(-12, -12)
+texture = ExtResource("2_pg6mf")
+centered = false
+vframes = 7
+frame = 5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="L"]
+polygon = PackedVector2Array(-11, -3, 11, -3, 11, 3, 3, 3, -5, 3, -5, 11, -11, 11)
+
+[node name="I" type="CharacterBody2D" parent="."]
+visible = false
+collision_layer = 3
+collision_mask = 3
+safe_margin = 0.001
+script = ExtResource("1_yb0pe")
+
+[node name="Sprite2D" type="Sprite2D" parent="I"]
+position = Vector2(-16, -16)
+texture = ExtResource("2_pg6mf")
+centered = false
+vframes = 7
+frame = 6
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="I"]
+polygon = PackedVector2Array(-15, -7, 15, -7, 15, -1, -15, -1)

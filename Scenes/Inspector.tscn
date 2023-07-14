@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://3y2gye4j5r0v"]
+
+[ext_resource type="Texture2D" uid="uid://vmkfddm258wh" path="res://Assets/Blocks.png" id="1_bgyvy"]
+[ext_resource type="Script" path="res://Scripts/Inspector.gd" id="1_sek5y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0osp"]
+size = Vector2(6, 6)
+
+[node name="Inspector" type="CharacterBody2D"]
+visible = false
+script = ExtResource("1_sek5y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bgyvy")
+centered = false
+hframes = 3
+vframes = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_p0osp")
